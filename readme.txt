@@ -11,3 +11,6 @@ http://hi.baidu.com/quanzhou722/item/4ccf7e88a877eaccef083d1a
 http://hi.baidu.com/quanzhou722/item/4213db3626a949fe96f88d3c
 
 https://jmeter-plugins.org/wiki/UltimateThreadGroup/
+
+# selenium
+http://www.cnblogs.com/jinxiao-pu/p/6677782.html
