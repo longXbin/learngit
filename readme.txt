@@ -8,3 +8,4 @@ http://www.cnblogs.com/jinxiao-pu/p/6677782.html
 4、 凤凰网某分站存在SQL注射漏洞：http://10.71.146.169/static/bugs/wooyun-2016-0182189.html
 
 https://blog.csdn.net/spring292713/article/details/39667835
+http://www.jb51.net/article/49573.htm
