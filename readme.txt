@@ -96,3 +96,25 @@ public class Base64Image {
         return encoder.encode(data);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+iVBORw0KGgoAAAANSUhEUgAABXEAAALnCAYAAADPiQTlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAMbPSURBVHhe7P1
+
+
