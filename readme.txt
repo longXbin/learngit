@@ -120,4 +120,4 @@ AuthRealm authRealm = (AuthRealm)rsm.getRealms().iterator().next();
 authRealm.clearAuthz();
 
 
-
+http://www.cnblogs.com/EasonJim/p/7481825.html
