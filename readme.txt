@@ -106,7 +106,18 @@ http://jinnianshilongnian.iteye.com/blog/2029217
 
 https://blog.csdn.net/LHacker/article/details/19340757
 
+步骤：
 
+1、在自定义的Realm增加方法：
+
+public void clearAuthz(){
+this.clearCachedAuthorizationInfo(SecurityUtils.getSubject().getPrincipals());
+}
+2、在自己的service调用这个方法：
+
+RealmSecurityManager rsm = (RealmSecurityManager)SecurityUtils.getSecurityManager();
+AuthRealm authRealm = (AuthRealm)rsm.getRealms().iterator().next();
+authRealm.clearAuthz();
 
 
 
