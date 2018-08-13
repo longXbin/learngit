@@ -121,3 +121,5 @@ authRealm.clearAuthz();
 
 
 http://www.cnblogs.com/EasonJim/p/7481825.html
+
+http://pangguoming.com/2018/02/07/springboot-shiro-401/
