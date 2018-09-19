@@ -136,3 +136,5 @@ https://blog.csdn.net/qq_31489805/article/details/80267916 shiro整合springboot
 https://blog.csdn.net/palerock/article/details/73457415
 https://blog.csdn.net/haoyuyang/article/details/80036989
 https://blog.csdn.net/poorCoder_/article/details/71374002
+
+https://blog.csdn.net/zxssoft/article/details/79651889 mysql 模糊匹配优化
