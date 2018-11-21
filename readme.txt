@@ -158,3 +158,28 @@ https://blog.csdn.net/qq_19729969/article/details/80902577 小程序日期时间
 https://blog.csdn.net/lizhipeng123321/article/details/82775575
 
 https://bbs.csdn.net/topics/392299866
+
+十大纲领 CCCDB DCBCD
+
+会议管理 BCBBD DDDDC
+
+考勤管理 DABCB BDAAB 
+
+日清邮件 DBACD CDBAB
+
+工作方法 DACDA D\D\BC\BD\AD
+
+企业微信 BDCCD DBBDD 
+
+总结汇报 BAABC DACBD
+
+费用管理 CCADB ABDDB
+
+客户服务 BBADB D/A/AC/CD/BC
+
+廉政自律 DBDCC DDDAB
+
+信息安全 ABDDB CDBBA ACBBA CACCC
+以上是企业文化的考试答案
+晚上回去考下试
+
