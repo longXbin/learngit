@@ -194,3 +194,5 @@ https://www.cnblogs.com/mfrbuaa/p/4588057.html//apk反编译
 
 
 https://time.geekbang.org/column/article/14577 测试52讲
+
+https://blog.csdn.net/u014373554/article/details/83656219//压缩图片上传oss
