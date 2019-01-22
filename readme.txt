@@ -25,7 +25,7 @@ https://blog.csdn.net/liyuanbhu/article/details/7882789
 
 
 
-
+8
 
 package com.picture;
 
@@ -196,3 +196,5 @@ https://www.cnblogs.com/mfrbuaa/p/4588057.html//apk反编译
 https://time.geekbang.org/column/article/14577 测试52讲
 
 https://blog.csdn.net/u014373554/article/details/83656219//压缩图片上传oss
+
+https://github.com/Wechat-Group/WxJava/wiki/MP_OAuth2%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83
