@@ -200,3 +200,6 @@ https://blog.csdn.net/u014373554/article/details/83656219//压缩图片上传oss
 https://github.com/Wechat-Group/WxJava/wiki/MP_OAuth2%E7%BD%91%E9%A1%B5%E6%8E%88%E6%9D%83
 
 https://blog.csdn.net/li_gameover/article/details/79917473  //前后端分离重定向问题
+
+
+https://www.cnblogs.com/zhuyingming/p/5076401.html java 加密解密
