@@ -159,30 +159,6 @@ https://blog.csdn.net/lizhipeng123321/article/details/82775575
 
 https://bbs.csdn.net/topics/392299866
 
-十大纲领 CCCDB DCBCD
-
-会议管理 BCBBD DDDDC
-
-考勤管理 DABCB BDAAB 
-
-日清邮件 DBACD CDBAB
-
-工作方法 DACDA D\D\BC\BD\AD
-
-企业微信 BDCCD DBBDD 
-
-总结汇报 BAABC DACBD
-
-费用管理 CCADB ABDDB
-
-客户服务 BBADB D/A/AC/CD/BC
-
-廉政自律 DBDCC DDDAB
-
-信息安全 ABDDB CDBBA ACBBA CACCC
-以上是企业文化的考试答案
-晚上回去考下试
-
 https://blog.csdn.net/kai46385076/article/details/39122313
 
 https://www.cnblogs.com/demodashi/p/9436573.html//小程序登录前后台流程
@@ -205,3 +181,6 @@ https://blog.csdn.net/li_gameover/article/details/79917473  //前后端分离重
 https://www.cnblogs.com/zhuyingming/p/5076401.html java 加密解密
 
 https://blog.csdn.net/qq_35246620/article/details/88041754 baiduchunwan
+
+
+https://blog.csdn.net/xlgen157387/article/details/87890995 ali kaiyuan 26
