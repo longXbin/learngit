@@ -188,3 +188,5 @@ https://blog.csdn.net/xlgen157387/article/details/87890995 ali kaiyuan 26
 https://blog.csdn.net/w410589502/article/details/77702358/  微信小程序码
 
 https://blog.csdn.net/valada/article/details/80892573 springcloud
+
+https://www.cnblogs.com/yi1036943655/p/7211275.html   小程序支付
