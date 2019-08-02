@@ -204,37 +204,43 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
 class ProtubufTool {
     private static void createAndShowGUI() {
-        // Create a new JFrame container.
-        JFrame jfrm = new JFrame("URL加密");
+        JFrame jfrm = new JFrame("ProTobuf小工具");
         jfrm.setResizable(false);
-        // Give the frame an initial size.
-        jfrm.setSize(500, 300);
-        // Terminate the program when the user closes the application.
+        jfrm.setSize(500, 100);
         jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // Create a text-based label.
         JLabel jlab = new JLabel("键:");
         JLabel jlab1 = new JLabel("数字0:");
         JLabel jlab2 = new JLabel("字符串2:");
-        JButton jbut = new JButton("加密");
+        JLabel jlab3 = new JLabel("数字值:");
+        JButton jbut = new JButton("编码");
+        
+        JButton jbut1 = new JButton("编码");
+        JButton jbut2 = new JButton("解码");
         
         
         
-        final JTextField tf = new JTextField(3);
+        final JTextField tf = new JTextField(5);
         final JTextField tf1 = new JTextField(10);
         final JTextField tf2 = new JTextField(10);
+        
+        final JTextField tf3 = new JTextField(13);
+        final JTextField tf4 = new JTextField(13);
+        
         jbut.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	 String text = tf.getText();
-                 tf1.setText(getKeyHex(Integer.parseInt(text), 0));
-                 tf2.setText(getKeyHex(Integer.parseInt(text), 2));
+            	 try {
+            		 tf1.setText(getKeyHex(Integer.parseInt(text), 0));
+            		 tf2.setText(getKeyHex(Integer.parseInt(text), 2));
+            	 }catch(Exception e1) {}
             }
         });
-        // Add the label to the content pane.
         jfrm.getContentPane().setLayout(new FlowLayout());
         jfrm.getContentPane().add(jlab);
         jfrm.getContentPane().add(tf);
@@ -243,18 +249,87 @@ class ProtubufTool {
         jfrm.getContentPane().add(tf1);
         jfrm.getContentPane().add(jlab2);
         jfrm.getContentPane().add(tf2);
-        // Display the frame.
+        
+        jbut1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	 String text = tf3.getText();
+            	 long l = Long.parseLong(text);
+            	 try {
+            		 tf4.setText(valToHex(Long.toBinaryString(l)));
+            	 }catch(NumberFormatException ne) {
+            		 JOptionPane.showMessageDialog(jfrm, "输入的数字过大");
+            	 }catch(Exception e1) {}
+            }
+        });
+        
+        jbut2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	 String text = tf3.getText();
+            	 long l = Long.parseLong(text,16);
+            	 try {
+            		 tf4.setText(""+calBinary(delChar(Long.toBinaryString(l))));
+            	 }catch(Exception e1) {}
+            }
+        });
+        
+        jfrm.getContentPane().add(jlab3);
+        jfrm.getContentPane().add(tf3);
+        jfrm.getContentPane().add(jbut1);
+        jfrm.getContentPane().add(jbut2);
+        jfrm.getContentPane().add(tf4);
+        
         jfrm.setLocationRelativeTo(null);
         jfrm.setVisible(true);
     }
 
     public static void main(String args[]) {
-        // Create the frame on the event dispatching thread.
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 createAndShowGUI();
             }
         });
+    }
+    
+    public static String valToHex(String binary) {
+    	int len = binary.length();
+    	long sum = 0;
+    	int n = 0;
+    	int duan = (int) Math.ceil(len / 7.0);
+    	for(int j=1; j <= duan; j++) {
+	    	for(int i = (len - (duan-j)*7)-1; i >= len - (duan-j+1)*7; i--) {
+	    		sum += ((binary.charAt(i) - 48) * (Math.pow(2, n)));
+	    		n++;
+	    		if(i == 0) {
+	    			n += (duan*7 - len + 1);
+	    			break;
+	    		}
+	    	}
+	    	
+	    	if(j != 1) {
+	    		n += 1;
+	    		sum += (Math.pow(2, 15+(j-2)*8));
+	    	}
+    	}
+    	return fillStr(Long.toHexString(sum));
+    }
+    
+    public static long calBinary(String binary) {
+    	int len = binary.length();
+    	long sum = 0;
+    	for(int i = 0; i < len; i++) {
+    		sum += ((binary.charAt(i) - 48) * (Math.pow(2, len - i - 1)));
+    	}
+    	return sum;
+    }
+    
+    public static String delChar(String binary) {
+    	int len = binary.length();
+    	StringBuilder sb = new StringBuilder();
+    	int duan = (int) Math.ceil(len / 8.0);
+    	for(int j = 1; j <= duan; j++) {
+    		sb.append(binary.substring(len-(j-1)*8-7, len-(j-1)*8));
+    	}
+    	return sb.toString();
     }
     
     public static String getKeyHex(int key, int type) {
@@ -268,5 +343,6 @@ class ProtubufTool {
     	return str;
     }
 }
+
 
 
