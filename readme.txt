@@ -193,3 +193,80 @@ https://www.cnblogs.com/yi1036943655/p/7211275.html   小程序支付
 
 https://blog.csdn.net/juoduomade/article/details/82179652 shiro更新权限
 
+
+
+
+package com.util;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+
+class ProtubufTool {
+    private static void createAndShowGUI() {
+        // Create a new JFrame container.
+        JFrame jfrm = new JFrame("URL加密");
+        jfrm.setResizable(false);
+        // Give the frame an initial size.
+        jfrm.setSize(500, 300);
+        // Terminate the program when the user closes the application.
+        jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Create a text-based label.
+        JLabel jlab = new JLabel("键:");
+        JLabel jlab1 = new JLabel("数字0:");
+        JLabel jlab2 = new JLabel("字符串2:");
+        JButton jbut = new JButton("加密");
+        
+        
+        
+        final JTextField tf = new JTextField(3);
+        final JTextField tf1 = new JTextField(10);
+        final JTextField tf2 = new JTextField(10);
+        jbut.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+            	 String text = tf.getText();
+                 tf1.setText(getKeyHex(Integer.parseInt(text), 0));
+                 tf2.setText(getKeyHex(Integer.parseInt(text), 2));
+            }
+        });
+        // Add the label to the content pane.
+        jfrm.getContentPane().setLayout(new FlowLayout());
+        jfrm.getContentPane().add(jlab);
+        jfrm.getContentPane().add(tf);
+        jfrm.getContentPane().add(jbut);
+        jfrm.getContentPane().add(jlab1);
+        jfrm.getContentPane().add(tf1);
+        jfrm.getContentPane().add(jlab2);
+        jfrm.getContentPane().add(tf2);
+        // Display the frame.
+        jfrm.setLocationRelativeTo(null);
+        jfrm.setVisible(true);
+    }
+
+    public static void main(String args[]) {
+        // Create the frame on the event dispatching thread.
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
+    }
+    
+    public static String getKeyHex(int key, int type) {
+    	return fillStr(Integer.toHexString((key << 3) | type));
+    }
+    
+    public static String fillStr(String str) {
+    	if(str.length() % 2 != 0) {
+    		return "0"+str;
+    	}
+    	return str;
+    }
+}
+
+
